@@ -1,13 +1,10 @@
 /**
  * Created by romag_000 on 13/03/2016.
  */
-public class Const implements Expression {
-    private final int value;
-    Const(int value) {this.value = value;}
-    private String representation() {
-        return Integer.toString(value);
-    }
-    public int evaluate(int v) {
+public class Const extends AbstractExpression {
+    private final double value;
+    Const(double value) {this.value = value;}
+    public double evaluate(double v) {
         return value;
     }
 }

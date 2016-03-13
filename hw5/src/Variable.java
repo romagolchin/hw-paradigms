@@ -2,9 +2,8 @@
  * Created by romag_000 on 13/03/2016.
  */
 public class Variable extends AbstractExpression {
-    String var;
-    Variable(String var) {
-        this.var = var;
+    Variable(String var) {}
+    public double evaluate(double value) {
+        return value;
     }
-    public String representation() {return var;}
 }

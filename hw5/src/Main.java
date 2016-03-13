@@ -4,6 +4,9 @@
 public class Main {
     public static void main(String args[]) {
         Variable x = new Variable("x");
-        System.out.println(new Add(new Subtract(new Multiply(x, x), new Multiply(new Const(2), x)), new Const(1)));
+        System.out.println(new Divide(
+                new Add(new Subtract(new Multiply(x, x),
+                new Multiply(new Const(2), x)), new Const(1)
+        ), new Const(2)).evaluate(Integer.parseInt(args[0])));
     }
 }
